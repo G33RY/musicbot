@@ -18,10 +18,7 @@ const { timeStamp } = require('console');
 class MusicBot{
     constructor(){
         this.bot = new Discord.Client();
-        for (let i = 0; i < process.argv.length; i++) {
-            const val = process.argv[i];
-            if(val.includes('TOKEN=')) this.TOKEN = val.substr(6);
-        }
+        this.TOKEN = process.env.BOT_TOKEN;
         this.volume = 0.5;
         this.GConnection = null;
         this.queue = [];
