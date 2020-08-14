@@ -1,0 +1,2 @@
+const MUSICBOT = require("./MusicBot");
+
